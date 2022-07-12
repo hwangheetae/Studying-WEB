@@ -2,43 +2,51 @@
 <head>
     <title>WEB1-JavaScript</title>
     <meta charset="utf-8">
-
-    <link rel="stylesheet" href="style.css">
-
     <script>
-        function linksSetColor(color)
-        {
+        var links ={
+            setColor:function(color)
+            {
             var alist = document. querySelectorAll('a');
                 var i= 0;
                 while(i< alist.length){
                     alist[i].style.color=color;
                     i++;
                 } 
-        }
-        function BodySetColor(color)
-        {
-            document.querySelector('body').style.color = color;
-        }
+            }
 
-        function BodySetBackgroundColor(color)
-        {
-            document.querySelector('body').style.backgroundColor = color;
+        }
+    </script>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        var Body= {
+            setColor:function(color)
+            {
+                document.querySelector('body').style.color = color;
+            },
+
+            setBackgroundColor:function(color)
+            {
+                document.querySelector('body').style.backgroundColor = color;
+            }
+
         }
 
         function nightDayHandler(self)
         {
             var target=document.querySelector('body');
             if(self.value=== 'night'){
-                BodySetBackgroundColor('black');
-                BodySetColor('white');
+                Body.setBackgroundColor('black');
+                Body.setColor('white');
                 self.value='day';
-                linksSetColor('powderblue');
+                links.setColor('powderblue');
             }
             else{
-                BodySetBackgroundColor('white');
-                BodySetColor('black');
+                Body.setBackgroundColor('white');
+                Body.setColor('black');
                 self.value='night';
-                linksSetColor('blue');
+                links.setColor('blue');
             }
         }
     </script>
