@@ -1,2 +1,2 @@
-# web1
-studying html, css, JS with (https://opentutorials.org/course/3084)
+# web1 2020
+유튜브 보고 만든 부속
