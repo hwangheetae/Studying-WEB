@@ -1,21 +1,25 @@
 h1 {
   text-align: center;
-  border: 1px solid black;
+  border: 12px solid beige;
   margin: 10px;
   padding: 20px;
-  background-color: #abceab;
+  background-color: #e2e2e2;
 }
 body {
-  margin: 0; /* 기본 마진 제거 */
-  height: 100vh; /* 뷰포트 높이에 맞춤 */
-  background-size: cover; /* 이미지가 화면을 꽉 채우도록 조정 */
-  background-position: center; /* 이미지가 중앙에 오도록 조정 */
+  margin: 10;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-color: #e2e2e2;
+  border: 1px solid white;
 }
 
 .main_gallary_grid {
   display: grid;
-  column-gap: 16px;
+  column-gap: 40px;
   row-gap: 40px;
+  justify-content: center;
+  grid-column: span 2;
 }
 @media (max-width: 750px) {
   .main_gallary_grid {
@@ -38,9 +42,12 @@ body {
   width: 220px;
   height: 310px;
   position: relative;
-  border: 1px solid gray;
+  border: 1px solid beige;
   padding: auto;
   margin: 0 auto;
+  position: relative;
+  padding: 10px;
+  background-color: white;
 }
 .overlay {
   position: absolute;
@@ -111,11 +118,5 @@ body {
   width: 220px;
   height: 310px;
   background-image: url(./image/image9.jpg);
-  background-size: cover;
-}
-.card10 {
-  width: 220px;
-  height: 310px;
-  background-image: url(./image/image10.jpg);
   background-size: cover;
 }
