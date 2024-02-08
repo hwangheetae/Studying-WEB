@@ -1,55 +1,58 @@
-<div class="container">
-  <div class="overlay"></div>
-  <div class="card"></div>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="card.css" />
+    <title>Gallary</title>
+  </head>
+  <body>
+    <header>
+      <h1>Gallary</h1>
+    </header>
+    <div class="main_gallary_grid">
+      <div class="container">
+        <div class="overlay"></div>
+        <div class="card1"></div>
+      </div>
+      <div class="container">
+        <div class="overlay"></div>
+        <div class="card2"></div>
+      </div>
+      <div class="container">
+        <div class="overlay"></div>
+        <div class="card3"></div>
+      </div>
+      <div class="container">
+        <div class="overlay"></div>
+        <div class="card4"></div>
+      </div>
+      <div class="container">
+        <div class="overlay"></div>
+        <div class="card5"></div>
+      </div>
+      <div class="container">
+        <div class="overlay"></div>
+        <div class="card6"></div>
+      </div>
+      <div class="container">
+        <div class="overlay"></div>
+        <div class="card7"></div>
+      </div>
+      <div class="container">
+        <div class="overlay"></div>
+        <div class="card8"></div>
+      </div>
+      <div class="container">
+        <div class="overlay"></div>
+        <div class="card9"></div>
+      </div>
+      <div class="container">
+        <div class="overlay"></div>
+        <div class="card10"></div>
+      </div>
+    </div>
 
-<script>
-  var container = document.querySelector(".container");
-  var overlay = document.querySelector(".overlay");
-
-  container.addEventListener("mousemove", function (e) {
-    var x = e.offsetX;
-    var y = e.offsetY;
-    var rotateY = (-1 / 5) * x + 20;
-    var rotateX = (4 / 30) * y - 20;
-    overlay.style = `background-position : ${x / 5 + y / 4}%`;
-    container.style = `transform: perspective(350px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-  });
-
-  container.addEventListener("mouseout", function () {
-    overlay.style = "filter: opacity(0)";
-    container.style =
-      "transform :perspective(350px) rotateY(0deg) rotateX(0deg)";
-  });
-</script>
-
-<style>
-  .container {
-    width: 220px;
-    height: 310px;
-    position: relative;
-  }
-  .overlay {
-    position: absolute;
-    width: 220px;
-    height: 310px;
-    background: linear-gradient(
-      105deg,
-      transparent 40%,
-      rgba(255, 219, 112, 0.8) 45%,
-      rgba(132, 50, 255, 0.6) 50%,
-      transparent 54%
-    );
-    filter: brightness(1.2) opacity(0.8);
-    mix-blend-mode: color-dodge;
-    background-size: 150% 150%;
-    background-position: 100px;
-    transition: all 0.1s;
-  }
-  .card {
-    width: 220px;
-    height: 310px;
-    background-image: url(face.jpg);
-    background-size: cover;
-  }
-</style>
+    <script src="card_effect.js"></script>
+  </body>
+</html>
