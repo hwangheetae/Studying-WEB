@@ -1,0 +1,3 @@
+{
+  "payload": "[{\"type\":\"CHANGE_COLOR\",\"color\":\"red\"},{\"type\":\"CHANGE_COLOR\",\"color\":\"blue\"},{\"type\":\"CHANGE_COLOR\",\"color\":\"green\"}]"
+}
